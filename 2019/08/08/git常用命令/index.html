@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="背景使用过EF的朋友们相信都会遇到Validation failed for one or more entities. See ‘EntityValidationErrors’这种异常，这是由于EF在写入数据库前对实体验证不通过引起的异常（如果没有设置Configuration.ValidateOnSaveEnabled=false的话），由于EF没有将这个异常的详细信息抛到上层，经常无法跟踪到">
-<meta name="keywords" content=".net,EntityFramework,EntityValidationErrors">
+  <meta name="description" content="初始化12345678# 初始化目录为git仓库$ git init &amp;lt;dirName&amp;gt;# 克隆一个仓库$ git clone [url] [dir]# 停止跟踪文件（文件不会被删除，只是不受git管理）$ git rm --cached [file]  配置123456789# 查看配置$ git config --list# 编辑配置$ git config -e [--globa">
+<meta name="keywords" content="git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记录EntityValidationErrors的详细信息">
-<meta property="og:url" content="https://wukaixian.github.io/2015/12/03/记录EntityValidationErrors的详细信息/index.html">
+<meta property="og:title" content="git常用命令">
+<meta property="og:url" content="https://wukaixian.github.io/2019/08/08/git常用命令/index.html">
 <meta property="og:site_name" content="{ wukaixian }">
-<meta property="og:description" content="背景使用过EF的朋友们相信都会遇到Validation failed for one or more entities. See ‘EntityValidationErrors’这种异常，这是由于EF在写入数据库前对实体验证不通过引起的异常（如果没有设置Configuration.ValidateOnSaveEnabled=false的话），由于EF没有将这个异常的详细信息抛到上层，经常无法跟踪到">
+<meta property="og:description" content="初始化12345678# 初始化目录为git仓库$ git init &amp;lt;dirName&amp;gt;# 克隆一个仓库$ git clone [url] [dir]# 停止跟踪文件（文件不会被删除，只是不受git管理）$ git rm --cached [file]  配置123456789# 查看配置$ git config --list# 编辑配置$ git config -e [--globa">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-08T06:32:25.671Z">
+<meta property="og:updated_time" content="2019-08-08T08:59:37.837Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="记录EntityValidationErrors的详细信息">
-<meta name="twitter:description" content="背景使用过EF的朋友们相信都会遇到Validation failed for one or more entities. See ‘EntityValidationErrors’这种异常，这是由于EF在写入数据库前对实体验证不通过引起的异常（如果没有设置Configuration.ValidateOnSaveEnabled=false的话），由于EF没有将这个异常的详细信息抛到上层，经常无法跟踪到">
-  <link rel="canonical" href="https://wukaixian.github.io/2015/12/03/记录EntityValidationErrors的详细信息/">
+<meta name="twitter:title" content="git常用命令">
+<meta name="twitter:description" content="初始化12345678# 初始化目录为git仓库$ git init &amp;lt;dirName&amp;gt;# 克隆一个仓库$ git clone [url] [dir]# 停止跟踪文件（文件不会被删除，只是不受git管理）$ git rm --cached [file]  配置123456789# 查看配置$ git config --list# 编辑配置$ git config -e [--globa">
+  <link rel="canonical" href="https://wukaixian.github.io/2019/08/08/git常用命令/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>记录EntityValidationErrors的详细信息 | { wukaixian }</title>
+  <title>git常用命令 | { wukaixian }</title>
   
 
 
@@ -209,7 +209,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wukaixian.github.io/2015/12/03/记录EntityValidationErrors的详细信息/">
+    <link itemprop="mainEntityOfPage" href="https://wukaixian.github.io/2019/08/08/git常用命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wukaixian">
@@ -223,7 +223,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">记录EntityValidationErrors的详细信息
+          <h1 class="post-title" itemprop="name headline">git常用命令
 
             
           </h1>
@@ -240,7 +240,7 @@
                 
               
 
-              <time title="创建时间：2015-12-03 00:09:09" itemprop="dateCreated datePublished" datetime="2015-12-03T00:09:09+08:00">2015-12-03</time>
+              <time title="创建时间：2019-08-08 16:35:42" itemprop="dateCreated datePublished" datetime="2019-08-08T16:35:42+08:00">2019-08-08</time>
             </span>
           
 
@@ -255,11 +255,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>使用过EF的朋友们相信都会遇到<code>Validation failed for one or more entities. See ‘EntityValidationErrors’</code>这种异常，这是由于EF在写入数据库前对实体验证不通过引起的异常（如果没有设置Configuration.ValidateOnSaveEnabled=false的话），由于EF没有将这个异常的详细信息抛到上层，经常无法跟踪到是哪个属性没有验证通过，虽然知道错了，但不知道错在哪里，怎么办？怎么办！</p>
-<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>既然EF吃了你的<code>EntityValidationErrors</code>,那就想办法让它吐出来：</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">TestDbContext</span>:<span class="title">DbContext</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">int</span> <span class="title">SaveChanges</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">       <span class="keyword">try</span></span><br><span class="line">        &#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="keyword">base</span>.SaveChanges();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span> (DbEntityValidationException exception)</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="comment">// 提取错误信息</span></span><br><span class="line">            <span class="keyword">var</span> errorMessages =</span><br><span class="line">                  exception.EntityValidationErrors</span><br><span class="line">                   .SelectMany(validationResult =&gt; validationResult.ValidationErrors)</span><br><span class="line">                    .Select(m =&gt; m.ErrorMessage);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">var</span> fullErrorMessage = <span class="keyword">string</span>.Join(<span class="string">", "</span>, errorMessages);</span><br><span class="line">           </span><br><span class="line">            <span class="comment">// 记录日志</span></span><br><span class="line">            <span class="comment">// Log.Error(fullErrorMessage);</span></span><br><span class="line">            <span class="keyword">var</span> exceptionMessage = <span class="keyword">string</span>.Concat(exception.Message, <span class="string">" 验证异常消息是："</span>, fullErrorMessage);</span><br><span class="line"></span><br><span class="line">             <span class="keyword">throw</span> <span class="keyword">new</span> DbEntityValidationException(exceptionMessage, exception.EntityValidationErrors);</span><br><span class="line">         &#125;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 初始化目录为git仓库</span><br><span class="line"><span class="meta">$</span> git init &lt;dirName&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 克隆一个仓库</span><br><span class="line"><span class="meta">$</span> git clone [url] [dir]</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 停止跟踪文件（文件不会被删除，只是不受git管理）</span><br><span class="line"><span class="meta">$</span> git rm --cached [file]</span><br></pre></td></tr></table></figure>
 
-<p>这样就可以拿到详细的错误信息了。</p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 查看配置</span><br><span class="line"><span class="meta">$</span> git config --list</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 编辑配置</span><br><span class="line"><span class="meta">$</span> git config -e [--global]</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 配置用户信息</span><br><span class="line"><span class="meta">$</span> git config [--global] user.name "[name]"</span><br><span class="line"><span class="meta">$</span> git config [--global] user.email "[email address]"</span><br></pre></td></tr></table></figure>
+
+<h3 id="远程同步操作"><a href="#远程同步操作" class="headerlink" title="远程同步操作"></a>远程同步操作</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 设置远程地址</span><br><span class="line"><span class="meta">$</span> git remote add origin [url]</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 删除远程地址</span><br><span class="line"><span class="meta">$</span> git remote rm origin</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 修改远程地址</span><br><span class="line"><span class="meta">$</span> git remote set-url origin [url]</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 显示远程所有仓库</span><br><span class="line"><span class="meta">$</span> git remote -v</span><br></pre></td></tr></table></figure>
+
+<h3 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 建立追踪关系，在现有分支与指定的远程分支之间</span><br><span class="line"><span class="meta">$</span> git branch --set-upstream [branch] [remote-branch]</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 合并指定分支到当前分支</span><br><span class="line"><span class="meta">$</span> git merge [branch]</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 删除分支 </span><br><span class="line"><span class="meta">$</span> git branch -d [branch name]</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 删除远程分支</span><br><span class="line"><span class="meta">$</span> git push origin --delete [branch-name]</span><br><span class="line"><span class="meta">$</span> git branch -dr [remote/branch]</span><br></pre></td></tr></table></figure>
+
+<h3 id="撤消操作"><a href="#撤消操作" class="headerlink" title="撤消操作"></a>撤消操作</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 暂时将未提交的变化移除，稍后再移入</span><br><span class="line"><span class="meta">$</span> git stash # 暂存</span><br><span class="line"><span class="meta">$</span> git stash pop   # 取出暂存</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 恢复暂存区的所有文件到工作区</span><br><span class="line"><span class="meta">$</span> git checkout [filename]</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -271,17 +276,13 @@
           
         
         <div class="post-tags">
-            <a href="/tags/net/" rel="tag"># .net</a>
-          
-            <a href="/tags/EntityFramework/" rel="tag"># EntityFramework</a>
-          
-            <a href="/tags/EntityValidationErrors/" rel="tag"># EntityValidationErrors</a>
+            <a href="/tags/git/" rel="tag"># git</a>
           
         </div>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-              <a href="/2015/11/15/使用OWIN托管ASP-NET-Web-API-2/" rel="next" title="使用OWIN托管ASP.NET Web API 2">
-                <i class="fa fa-chevron-left"></i> 使用OWIN托管ASP.NET Web API 2
+              <a href="/2019/05/01/ASP-NET-Core使用JWT做接口鉴权/" rel="next" title="ASP.NET Core使用JWT做接口鉴权">
+                <i class="fa fa-chevron-left"></i> ASP.NET Core使用JWT做接口鉴权
               </a>
             
           </div>
@@ -289,10 +290,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-              <a href="/2016/08/07/asp-net-mvc-全局model验证/" rel="prev" title="ASP.NET MVC 使用过滤器进行model验证">
-                ASP.NET MVC 使用过滤器进行model验证 <i class="fa fa-chevron-right"></i>
-              </a>
-            
           </div>
         </div>
     </footer>
@@ -423,7 +420,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案"><span class="nav-number">2.</span> <span class="nav-text">解决方案</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化"><span class="nav-number">1.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程同步操作"><span class="nav-number">3.</span> <span class="nav-text">远程同步操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支操作"><span class="nav-number">4.</span> <span class="nav-text">分支操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#撤消操作"><span class="nav-number">5.</span> <span class="nav-text">撤消操作</span></a></li></ol></div>
             
 
           </div>
