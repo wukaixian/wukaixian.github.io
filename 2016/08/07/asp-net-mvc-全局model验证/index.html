@@ -310,6 +310,15 @@
 
           </div>
           
+    
+    
+  <div class="comments" id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+  
 
 
         </div>
@@ -508,6 +517,29 @@
   <script src="/js/scrollspy.js?v=7.3.0"></script>
 <script src="/js/post-details.js?v=7.3.0"></script>
 
+
+    
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://wukaixian.github.io/2016/08/07/asp-net-mvc-全局model验证/";
+    this.page.identifier = "2016/08/07/asp-net-mvc-全局model验证/";
+    this.page.title = 'ASP.NET MVC 使用过滤器进行model验证';};
+  function loadComments() {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://wukaixian.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  }
+    window.addEventListener('load', loadComments, false);
+  
+</script>
 
 </body>
 </html>
