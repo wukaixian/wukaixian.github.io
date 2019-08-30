@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="如果是自己的开发机器，对GitHub仓库进行pull/push操作时，推荐使用ssh。使用账号和密码存在登录过期的问题，不太清楚GitHub的session具体是多长时间过期，我最近隔两天就要输一下账号密码，非常麻烦。而ssh则不会有过期的问题，如果你不删key的话。 分三步走。 本地电脑生成SSH密钥打开git bash，输入以下命令生成rsa密钥 123 # 邮箱就是你的github邮箱，生成">
+  <meta name="description" content="如果是自己的开发机器，对GitHub仓库进行pull/push操作时，推荐使用ssh。使用账号和密码存在登录过期的问题，不太清楚GitHub的session具体是多长时间过期，我最近隔两天就要输一下账号密码，非常麻烦。而ssh则不会有过期的问题，如果你不删key的话。 分三步走。 本地电脑生成SSH密钥打开git bash，输入以下命令生成rsa密钥 123# 邮箱就是你的github邮箱，生成过">
 <meta name="keywords" content="github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用SSH登录GitHub操作仓库">
 <meta property="og:url" content="https://wukaixian.me/2019/08/30/使用SSH登录GitHub操作仓库/index.html">
 <meta property="og:site_name" content="{ wukaixian }">
-<meta property="og:description" content="如果是自己的开发机器，对GitHub仓库进行pull/push操作时，推荐使用ssh。使用账号和密码存在登录过期的问题，不太清楚GitHub的session具体是多长时间过期，我最近隔两天就要输一下账号密码，非常麻烦。而ssh则不会有过期的问题，如果你不删key的话。 分三步走。 本地电脑生成SSH密钥打开git bash，输入以下命令生成rsa密钥 123 # 邮箱就是你的github邮箱，生成">
+<meta property="og:description" content="如果是自己的开发机器，对GitHub仓库进行pull/push操作时，推荐使用ssh。使用账号和密码存在登录过期的问题，不太清楚GitHub的session具体是多长时间过期，我最近隔两天就要输一下账号密码，非常麻烦。而ssh则不会有过期的问题，如果你不删key的话。 分三步走。 本地电脑生成SSH密钥打开git bash，输入以下命令生成rsa密钥 123# 邮箱就是你的github邮箱，生成过">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-30T08:02:12.780Z">
+<meta property="og:updated_time" content="2019-08-30T08:04:51.323Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用SSH登录GitHub操作仓库">
-<meta name="twitter:description" content="如果是自己的开发机器，对GitHub仓库进行pull/push操作时，推荐使用ssh。使用账号和密码存在登录过期的问题，不太清楚GitHub的session具体是多长时间过期，我最近隔两天就要输一下账号密码，非常麻烦。而ssh则不会有过期的问题，如果你不删key的话。 分三步走。 本地电脑生成SSH密钥打开git bash，输入以下命令生成rsa密钥 123 # 邮箱就是你的github邮箱，生成">
+<meta name="twitter:description" content="如果是自己的开发机器，对GitHub仓库进行pull/push操作时，推荐使用ssh。使用账号和密码存在登录过期的问题，不太清楚GitHub的session具体是多长时间过期，我最近隔两天就要输一下账号密码，非常麻烦。而ssh则不会有过期的问题，如果你不删key的话。 分三步走。 本地电脑生成SSH密钥打开git bash，输入以下命令生成rsa密钥 123# 邮箱就是你的github邮箱，生成过">
   <link rel="canonical" href="https://wukaixian.me/2019/08/30/使用SSH登录GitHub操作仓库/">
 
 
@@ -274,22 +274,18 @@
         <p>如果是自己的开发机器，对GitHub仓库进行pull/push操作时，推荐使用ssh。使用账号和密码存在登录过期的问题，不太清楚GitHub的session具体是多长时间过期，我最近隔两天就要输一下账号密码，非常麻烦。而ssh则不会有过期的问题，如果你不删key的话。</p>
 <p>分三步走。</p>
 <h2 id="本地电脑生成SSH密钥"><a href="#本地电脑生成SSH密钥" class="headerlink" title="本地电脑生成SSH密钥"></a>本地电脑生成SSH密钥</h2><p>打开git bash，输入以下命令生成rsa密钥</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"> #</span> 邮箱就是你的github邮箱，生成过程中会要求输入名称和密码，这两项可以直接回车或yes跳过，默认就好了</span><br><span class="line"><span class="meta"> #</span> 如果你的系统存在其他的rsa密钥，可以在第一次提示的时候输入密钥文件的名称</span><br><span class="line"><span class="meta">$</span> ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</span><br></pre></td></tr></table></figure>
-
-<br>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 邮箱就是你的github邮箱，生成过程中会要求输入名称和密码，这两项可以直接回车或yes跳过，默认就好了</span><br><span class="line"><span class="meta">#</span> 如果你的系统存在其他的rsa密钥，可以在第一次提示的时候输入密钥文件的名称</span><br><span class="line"><span class="meta">$</span> ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</span><br></pre></td></tr></table></figure>
 
 <h2 id="将公钥配置到GitHub"><a href="#将公钥配置到GitHub" class="headerlink" title="将公钥配置到GitHub"></a>将公钥配置到GitHub</h2><p>复制前一步生成的rsa<strong>公钥</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"> #</span> id_rsa.pub是默认的名称，如果 你修改了名称，要改为自己的文件名</span><br><span class="line"><span class="meta">$</span> clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> id_rsa.pub是默认的名称，如果 你修改了名称，要改为自己的文件名</span><br><span class="line"><span class="meta">$</span> clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
 
 <p><strong>配置到GitHub</strong></p>
 <p>打开自己的GitHub首页，右上角 Settings&gt;SSH and GPG keys&gt;New SSH key 界面，将key复制进去保存，title可以随便定义。</p>
-<br>
-
 <h2 id="使用SSH方式登录"><a href="#使用SSH方式登录" class="headerlink" title="使用SSH方式登录"></a>使用SSH方式登录</h2><p>对于新的仓储，使用ssh链接克隆即可，如：<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:username/repo.git</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git clone git@github.com:user/repo.git</span><br></pre></td></tr></table></figure>
 
 <p>对于之前用https方式的仓库，则需要修改下远程地址：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"> #</span> 设置url</span><br><span class="line"><span class="meta">$</span> git remote set-url origin git@github.com:xxx/xxx.git</span><br><span class="line"></span><br><span class="line"><span class="meta"> #</span> 查看url</span><br><span class="line"><span class="meta">$</span> git remote -v</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>设置url</span><br><span class="line"><span class="meta">$</span> git remote set-url origin git@github.com:xxx/xxx.git</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>查看url</span><br><span class="line"><span class="meta">$</span> git remote -v</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>参考 <a href="https://help.github.com/cn/articles/about-ssh" target="_blank" rel="noopener">https://help.github.com/cn/articles/about-ssh</a></p>
