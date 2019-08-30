@@ -55,17 +55,17 @@
   };
 </script>
 
-  <meta name="description" content="tag：90后/程序员 baladfsdfs    hello">
+  <meta name="description" content="Tag：90后/程序员/业余电工/长跑爱者 巫开先，从事互联网项目开发已有五年，主要使用.net技术。 最近在学java相关技术，收获很多。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="关于我">
 <meta property="og:url" content="https://wukaixian.github.io/about/index.html">
 <meta property="og:site_name" content="{ wukaixian }">
-<meta property="og:description" content="tag：90后/程序员 baladfsdfs    hello">
+<meta property="og:description" content="Tag：90后/程序员/业余电工/长跑爱者 巫开先，从事互联网项目开发已有五年，主要使用.net技术。 最近在学java相关技术，收获很多。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-09T03:44:46.721Z">
+<meta property="og:updated_time" content="2019-08-30T02:43:53.463Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于我">
-<meta name="twitter:description" content="tag：90后/程序员 baladfsdfs    hello">
+<meta name="twitter:description" content="Tag：90后/程序员/业余电工/长跑爱者 巫开先，从事互联网项目开发已有五年，主要使用.net技术。 最近在学java相关技术，收获很多。">
   <link rel="canonical" href="https://wukaixian.github.io/about/">
 
 
@@ -239,12 +239,9 @@
       <div class="post-body">
         
           <hr>
-<p>tag：90后/程序员</p>
-<blockquote class="blockquote-center"><p>baladfsdfs </p>
-</blockquote>
-<blockquote>
-<p>hello</p>
-</blockquote>
+<p>Tag：90后/程序员/业余电工/长跑爱者</p>
+<p>巫开先，从事互联网项目开发已有五年，主要使用.net技术。</p>
+<p>最近在学java相关技术，收获很多。</p>
 
         
       </div>
@@ -262,6 +259,16 @@
 
           </div>
           
+    
+    
+  <div class="comments" id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+  
+
 
         </div>
           
@@ -292,7 +299,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -323,7 +330,13 @@
         
           
         
-        <span class="site-state-item-count">10</span>
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">标签</span>
         
       </div>
@@ -471,6 +484,45 @@
   }
   // defer loading until the whole page loading is completed
   window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://wukaixian.github.io/about/index.html";
+    this.page.identifier = "about/index.html";
+    this.page.title = '关于我';};
+  function loadComments() {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://wukaixian.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  }
+    $(function() {
+      var offsetTop = $('#comments').offset().top - $(window).height();
+      if (offsetTop <= 0) {
+        // load directly when there's no a scrollbar
+        window.addEventListener('load', loadComments, false);
+      } else {
+        $(window).on('scroll.disqus_scroll', function() {
+          // offsetTop may changes because of manually resizing browser window or lazy loading images.
+          var offsetTop = $('#comments').offset().top - $(window).height();
+          var scrollTop = $(window).scrollTop();
+
+          // pre-load comments a bit? (margin or anything else)
+          if (offsetTop - scrollTop < 60) {
+            $(window).off('.disqus_scroll');
+            loadComments();
+          }
+        });
+      }
+    });
+  
 </script>
 
 </body>
