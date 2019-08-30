@@ -55,18 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="Tag：90后/程序员/业余电工/长跑爱者 巫开先，从事互联网项目开发已有五年，主要使用.net技术。 最近在学java相关技术，收获很多。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="https://wukaixian.me/about/index.html">
+  <meta name="description" content="如果是自己的开发机器，对GitHub仓库进行pull/push操作时，推荐使用ssh。使用账号和密码存在登录过期的问题，不太清楚GitHub的session具体是多长时间过期，我最近隔两天就要输一下账号密码，非常麻烦。而ssh则不会有过期的问题，如果你不删key的话。 分三步走。 本地电脑生成SSH密钥打开git bash，输入以下命令生成rsa密钥 123 # 邮箱就是你的github邮箱，生成">
+<meta name="keywords" content="github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用SSH登录GitHub操作仓库">
+<meta property="og:url" content="https://wukaixian.me/2019/08/30/使用SSH登录GitHub操作仓库/index.html">
 <meta property="og:site_name" content="{ wukaixian }">
-<meta property="og:description" content="Tag：90后/程序员/业余电工/长跑爱者 巫开先，从事互联网项目开发已有五年，主要使用.net技术。 最近在学java相关技术，收获很多。">
+<meta property="og:description" content="如果是自己的开发机器，对GitHub仓库进行pull/push操作时，推荐使用ssh。使用账号和密码存在登录过期的问题，不太清楚GitHub的session具体是多长时间过期，我最近隔两天就要输一下账号密码，非常麻烦。而ssh则不会有过期的问题，如果你不删key的话。 分三步走。 本地电脑生成SSH密钥打开git bash，输入以下命令生成rsa密钥 123 # 邮箱就是你的github邮箱，生成">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-30T02:43:53.463Z">
+<meta property="og:updated_time" content="2019-08-30T08:02:12.780Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于我">
-<meta name="twitter:description" content="Tag：90后/程序员/业余电工/长跑爱者 巫开先，从事互联网项目开发已有五年，主要使用.net技术。 最近在学java相关技术，收获很多。">
-  <link rel="canonical" href="https://wukaixian.me/about/">
+<meta name="twitter:title" content="使用SSH登录GitHub操作仓库">
+<meta name="twitter:description" content="如果是自己的开发机器，对GitHub仓库进行pull/push操作时，推荐使用ssh。使用账号和密码存在登录过期的问题，不太清楚GitHub的session具体是多长时间过期，我最近隔两天就要输一下账号密码，非常麻烦。而ssh则不会有过期的问题，如果你不删key的话。 分三步走。 本地电脑生成SSH密钥打开git bash，输入以下命令生成rsa密钥 123 # 邮箱就是你的github邮箱，生成">
+  <link rel="canonical" href="https://wukaixian.me/2019/08/30/使用SSH登录GitHub操作仓库/">
 
 
 <script id="page-configurations">
@@ -74,13 +75,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
-    isPage: true,
+    isPost: true,
+    isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>关于我 | { wukaixian }</title>
+  <title>使用SSH登录GitHub操作仓库 | { wukaixian }</title>
   
 
 
@@ -197,63 +198,136 @@
         <div class="content-wrap">
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
           <div id="content" class="content page-post-detail">
             
 
   <div id="posts" class="posts-expand">
     
-    
-    
-    <div class="post-block page">
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wukaixian.me/2019/08/30/使用SSH登录GitHub操作仓库/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wukaixian">
+      <meta itemprop="description" content="学习是一种生活方式">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="{ wukaixian }">
+    </span>
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">关于我
+        
+          <h1 class="post-title" itemprop="name headline">使用SSH登录GitHub操作仓库
 
-</h1>
+            
+          </h1>
+        
 
-<div class="post-meta">
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-30 15:13:21" itemprop="dateCreated datePublished" datetime="2019-08-30T15:13:21+08:00">2019-08-30</time>
+            </span>
+          
+
+          
+            
   
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="fa fa-comment-o"></i>
+    </span>
+    <span class="post-meta-item-text">评论数：</span>
+  
+    <a href="/2019/08/30/使用SSH登录GitHub操作仓库/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/30/使用SSH登录GitHub操作仓库/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+          
 
-</div>
+        </div>
+      </header>
 
-</header>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-      
-      
-      <div class="post-body">
-        
-          <hr>
-<p>Tag：90后/程序员/业余电工/长跑爱者</p>
-<p>巫开先，从事互联网项目开发已有五年，主要使用.net技术。</p>
-<p>最近在学java相关技术，收获很多。</p>
+        <p>如果是自己的开发机器，对GitHub仓库进行pull/push操作时，推荐使用ssh。使用账号和密码存在登录过期的问题，不太清楚GitHub的session具体是多长时间过期，我最近隔两天就要输一下账号密码，非常麻烦。而ssh则不会有过期的问题，如果你不删key的话。</p>
+<p>分三步走。</p>
+<h2 id="本地电脑生成SSH密钥"><a href="#本地电脑生成SSH密钥" class="headerlink" title="本地电脑生成SSH密钥"></a>本地电脑生成SSH密钥</h2><p>打开git bash，输入以下命令生成rsa密钥</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"> #</span> 邮箱就是你的github邮箱，生成过程中会要求输入名称和密码，这两项可以直接回车或yes跳过，默认就好了</span><br><span class="line"><span class="meta"> #</span> 如果你的系统存在其他的rsa密钥，可以在第一次提示的时候输入密钥文件的名称</span><br><span class="line"><span class="meta">$</span> ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</span><br></pre></td></tr></table></figure>
 
-        
-      </div>
-      
-      
-      
+<br>
+
+<h2 id="将公钥配置到GitHub"><a href="#将公钥配置到GitHub" class="headerlink" title="将公钥配置到GitHub"></a>将公钥配置到GitHub</h2><p>复制前一步生成的rsa<strong>公钥</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"> #</span> id_rsa.pub是默认的名称，如果 你修改了名称，要改为自己的文件名</span><br><span class="line"><span class="meta">$</span> clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<p><strong>配置到GitHub</strong></p>
+<p>打开自己的GitHub首页，右上角 Settings&gt;SSH and GPG keys&gt;New SSH key 界面，将key复制进去保存，title可以随便定义。</p>
+<br>
+
+<h2 id="使用SSH方式登录"><a href="#使用SSH方式登录" class="headerlink" title="使用SSH方式登录"></a>使用SSH方式登录</h2><p>对于新的仓储，使用ssh链接克隆即可，如：<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:username/repo.git</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git clone git@github.com:user/repo.git</span><br></pre></td></tr></table></figure>
+
+<p>对于之前用https方式的仓库，则需要修改下远程地址：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"> #</span> 设置url</span><br><span class="line"><span class="meta">$</span> git remote set-url origin git@github.com:xxx/xxx.git</span><br><span class="line"></span><br><span class="line"><span class="meta"> #</span> 查看url</span><br><span class="line"><span class="meta">$</span> git remote -v</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参考 <a href="https://help.github.com/cn/articles/about-ssh" target="_blank" rel="noopener">https://help.github.com/cn/articles/about-ssh</a></p>
+</blockquote>
+
     </div>
-    
 
     
     
     
+
+    <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/github/" rel="tag"># github</a>
+          
+        </div>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/2019/08/30/提升IDEA的启动速度/" rel="next" title="提升IDEA的启动速度">
+                <i class="fa fa-chevron-left"></i> 提升IDEA的启动速度
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
   </div>
 
 
@@ -283,8 +357,17 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -377,6 +460,23 @@
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地电脑生成SSH密钥"><span class="nav-number">1.</span> <span class="nav-text">本地电脑生成SSH密钥</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将公钥配置到GitHub"><span class="nav-number">2.</span> <span class="nav-text">将公钥配置到GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用SSH方式登录"><span class="nav-number">3.</span> <span class="nav-text">使用SSH方式登录</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -475,10 +575,9 @@
 
 
   
-    <script src="/js/scrollspy.js?v=7.3.0"></script>
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
 <script src="/js/post-details.js?v=7.3.0"></script>
 
-  
 
     
 <script>
@@ -493,9 +592,9 @@
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://wukaixian.me/about/index.html";
-    this.page.identifier = "about/index.html";
-    this.page.title = '关于我';};
+    this.page.url = "https://wukaixian.me/2019/08/30/使用SSH登录GitHub操作仓库/";
+    this.page.identifier = "2019/08/30/使用SSH登录GitHub操作仓库/";
+    this.page.title = '使用SSH登录GitHub操作仓库';};
   function loadComments() {
     if (window.DISQUS) {
       DISQUS.reset({
