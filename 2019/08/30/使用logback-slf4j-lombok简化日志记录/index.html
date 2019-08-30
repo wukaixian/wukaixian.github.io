@@ -56,18 +56,18 @@
 </script>
 
   <meta name="description" content="介绍 logbacklogback的出现是为了替代log4j，它是一个记录日志更快、占用资源更少、使用更方便的日志系统，在springboot项目中默认集成了logback。其中logback依赖了三个组件：logback-classic.jar、slf4j-api.jar、logback-core.jar。  slf4jslf4j全称Simple Logging Facade for Java">
-<meta name="keywords" content="java">
+<meta name="keywords" content="java,lombok">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用logback+slf4j+lombok简化日志记录">
-<meta property="og:url" content="https://wukaixian.github.io/2019/08/30/使用logback-slf4j-lombok简化日志记录/index.html">
+<meta property="og:url" content="https://wukaixian.me/2019/08/30/使用logback-slf4j-lombok简化日志记录/index.html">
 <meta property="og:site_name" content="{ wukaixian }">
 <meta property="og:description" content="介绍 logbacklogback的出现是为了替代log4j，它是一个记录日志更快、占用资源更少、使用更方便的日志系统，在springboot项目中默认集成了logback。其中logback依赖了三个组件：logback-classic.jar、slf4j-api.jar、logback-core.jar。  slf4jslf4j全称Simple Logging Facade for Java">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-30T05:51:40.454Z">
+<meta property="og:updated_time" content="2019-08-30T06:16:39.346Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用logback+slf4j+lombok简化日志记录">
 <meta name="twitter:description" content="介绍 logbacklogback的出现是为了替代log4j，它是一个记录日志更快、占用资源更少、使用更方便的日志系统，在springboot项目中默认集成了logback。其中logback依赖了三个组件：logback-classic.jar、slf4j-api.jar、logback-core.jar。  slf4jslf4j全称Simple Logging Facade for Java">
-  <link rel="canonical" href="https://wukaixian.github.io/2019/08/30/使用logback-slf4j-lombok简化日志记录/">
+  <link rel="canonical" href="https://wukaixian.me/2019/08/30/使用logback-slf4j-lombok简化日志记录/">
 
 
 <script id="page-configurations">
@@ -209,7 +209,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wukaixian.github.io/2019/08/30/使用logback-slf4j-lombok简化日志记录/">
+    <link itemprop="mainEntityOfPage" href="https://wukaixian.me/2019/08/30/使用logback-slf4j-lombok简化日志记录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wukaixian">
@@ -274,7 +274,7 @@
         <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
 <li><p><strong>logback</strong><br>logback的出现是为了替代log4j，它是一个记录日志更快、占用资源更少、使用更方便的日志系统，在springboot项目中默认集成了logback。其中logback依赖了三个组件：<code>logback-classic.jar</code>、<code>slf4j-api.jar</code>、<code>logback-core.jar</code>。</p>
 </li>
-<li><p><strong>slf4j</strong><br>slf4j全称<code>Simple Logging Facade for Java</code> 是对不同日志框架提供的一个门面封装，可以理解为是一种抽象的日志框架，可以由Log4j或者Logback来提供具体的实现。一般建议配合slf4j+logback来服用。</p>
+<li><p><strong>slf4j</strong><br>slf4j全称<code>Simple Logging Facade for Java</code> 是对不同日志框架提供的一个门面封装，可以理解为是一种抽象的日志框架，可以由Log4j或者Logback来提供具体的实现。一般建议配合slf4j+logbackw来服用。</p>
 </li>
 <li><p><strong>lombok</strong><br>lombok是一个java实用的工具，可以用它来帮助减少书写java的冗长代码，如getter、setter，对于POJO对象，可以使用注解@Data的方式自动生成getter和setter，提供类似于C#的<code>{ get;set }</code>功能。在记录日志使用lombok主要也是使用它的注解，进一步简化日志的记录。</p>
 </li>
@@ -311,6 +311,8 @@
         
         <div class="post-tags">
             <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/lombok/" rel="tag"># lombok</a>
           
         </div>
         <div class="post-nav">
@@ -424,7 +426,9 @@
         
           
         
-        <span class="site-state-item-count">13</span>
+          
+        
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">标签</span>
         
       </div>
@@ -591,7 +595,7 @@
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://wukaixian.github.io/2019/08/30/使用logback-slf4j-lombok简化日志记录/";
+    this.page.url = "https://wukaixian.me/2019/08/30/使用logback-slf4j-lombok简化日志记录/";
     this.page.identifier = "2019/08/30/使用logback-slf4j-lombok简化日志记录/";
     this.page.title = '使用logback+slf4j+lombok简化日志记录';};
   function loadComments() {
