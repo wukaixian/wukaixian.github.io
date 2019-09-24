@@ -55,19 +55,22 @@
   };
 </script>
 
-  <meta name="description" content="git天天在用，但不是很常用的命令容易忘，这里记录下，方便查找。 初始化12345678# 初始化目录为git仓库$ git init &amp;lt;dirName&amp;gt;# 克隆一个仓库$ git clone [url] [dir]# 停止跟踪文件（文件不会被删除，只是不受git管理）$ git rm --cached [file]  配置123456789# 查看配置$ git config --l">
-<meta name="keywords" content="git">
+  <meta name="description" content="数据之间的关系有三种：一对一、一对多以及多对多。数据、线性表是一对一的数据关系，树形结构是一对多的关系，而图是多对多的关系。 Concept a.完全图   完全图：每个结点之间都有关系（互相联通），如a图  有向完全图：每个结点的每个方向之间都有关系，如b图  连通图：从一个结点到另一个结点之间，至少存在一条路径，则这样的图称为连通图  强连通图：在有向图中，所有的节点都存在一条路径连通，则为">
+<meta name="keywords" content="数据结构,图,java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git常用命令">
-<meta property="og:url" content="https://wukaixian.me/2019/08/08/git常用命令/index.html">
+<meta property="og:title" content="graph">
+<meta property="og:url" content="https://wukaixian.me/2019/09/19/graph/index.html">
 <meta property="og:site_name" content="{ wukaixian }">
-<meta property="og:description" content="git天天在用，但不是很常用的命令容易忘，这里记录下，方便查找。 初始化12345678# 初始化目录为git仓库$ git init &amp;lt;dirName&amp;gt;# 克隆一个仓库$ git clone [url] [dir]# 停止跟踪文件（文件不会被删除，只是不受git管理）$ git rm --cached [file]  配置123456789# 查看配置$ git config --l">
+<meta property="og:description" content="数据之间的关系有三种：一对一、一对多以及多对多。数据、线性表是一对一的数据关系，树形结构是一对多的关系，而图是多对多的关系。 Concept a.完全图   完全图：每个结点之间都有关系（互相联通），如a图  有向完全图：每个结点的每个方向之间都有关系，如b图  连通图：从一个结点到另一个结点之间，至少存在一条路径，则这样的图称为连通图  强连通图：在有向图中，所有的节点都存在一条路径连通，则为">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-08T09:06:20.010Z">
+<meta property="og:image" content="https://wukaixian.me/images/graph.gif">
+<meta property="og:image" content="https://wukaixian.me/images/graph2.gif">
+<meta property="og:updated_time" content="2019-09-19T07:17:39.838Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git常用命令">
-<meta name="twitter:description" content="git天天在用，但不是很常用的命令容易忘，这里记录下，方便查找。 初始化12345678# 初始化目录为git仓库$ git init &amp;lt;dirName&amp;gt;# 克隆一个仓库$ git clone [url] [dir]# 停止跟踪文件（文件不会被删除，只是不受git管理）$ git rm --cached [file]  配置123456789# 查看配置$ git config --l">
-  <link rel="canonical" href="https://wukaixian.me/2019/08/08/git常用命令/">
+<meta name="twitter:title" content="graph">
+<meta name="twitter:description" content="数据之间的关系有三种：一对一、一对多以及多对多。数据、线性表是一对一的数据关系，树形结构是一对多的关系，而图是多对多的关系。 Concept a.完全图   完全图：每个结点之间都有关系（互相联通），如a图  有向完全图：每个结点的每个方向之间都有关系，如b图  连通图：从一个结点到另一个结点之间，至少存在一条路径，则这样的图称为连通图  强连通图：在有向图中，所有的节点都存在一条路径连通，则为">
+<meta name="twitter:image" content="https://wukaixian.me/images/graph.gif">
+  <link rel="canonical" href="https://wukaixian.me/2019/09/19/graph/">
 
 
 <script id="page-configurations">
@@ -81,7 +84,7 @@
   };
 </script>
 
-  <title>git常用命令 | { wukaixian }</title>
+  <title>graph | { wukaixian }</title>
   
 
 
@@ -209,7 +212,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wukaixian.me/2019/08/08/git常用命令/">
+    <link itemprop="mainEntityOfPage" href="https://wukaixian.me/2019/09/19/graph/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wukaixian">
@@ -223,7 +226,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">git常用命令
+          <h1 class="post-title" itemprop="name headline">graph
 
             
           </h1>
@@ -240,7 +243,7 @@
                 
               
 
-              <time title="创建时间：2019-08-08 16:35:42" itemprop="dateCreated datePublished" datetime="2019-08-08T16:35:42+08:00">2019-08-08</time>
+              <time title="创建时间：2019-09-19 14:55:46" itemprop="dateCreated datePublished" datetime="2019-09-19T14:55:46+08:00">2019-09-19</time>
             </span>
           
 
@@ -254,8 +257,8 @@
     </span>
     <span class="post-meta-item-text">评论数：</span>
   
-    <a href="/2019/08/08/git常用命令/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/08/git常用命令/" itemprop="commentCount"></span>
+    <a href="/2019/09/19/graph/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/09/19/graph/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -271,18 +274,22 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>git天天在用，但不是很常用的命令容易忘，这里记录下，方便查找。</p>
-<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 初始化目录为git仓库</span><br><span class="line"><span class="meta">$</span> git init &lt;dirName&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 克隆一个仓库</span><br><span class="line"><span class="meta">$</span> git clone [url] [dir]</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 停止跟踪文件（文件不会被删除，只是不受git管理）</span><br><span class="line"><span class="meta">$</span> git rm --cached [file]</span><br></pre></td></tr></table></figure>
+        <p><img src="/images/graph.gif" alt="graph"></p>
+<p>数据之间的关系有三种：一对一、一对多以及多对多。数据、线性表是一对一的数据关系，树形结构是一对多的关系，而图是多对多的关系。</p>
+<h2 id="Concept"><a href="#Concept" class="headerlink" title="Concept"></a>Concept</h2><p><img src="/images/graph2.gif" alt="完全图"></p>
+<p style="text-align:center">a.完全图</p>
 
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 查看配置</span><br><span class="line"><span class="meta">$</span> git config --list</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 编辑配置</span><br><span class="line"><span class="meta">$</span> git config -e [--global]</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 配置用户信息</span><br><span class="line"><span class="meta">$</span> git config [--global] user.name "[name]"</span><br><span class="line"><span class="meta">$</span> git config [--global] user.email "[email address]"</span><br></pre></td></tr></table></figure>
-
-<h3 id="远程同步操作"><a href="#远程同步操作" class="headerlink" title="远程同步操作"></a>远程同步操作</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 设置远程地址</span><br><span class="line"><span class="meta">$</span> git remote add origin [url]</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 删除远程地址</span><br><span class="line"><span class="meta">$</span> git remote rm origin</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 修改远程地址</span><br><span class="line"><span class="meta">$</span> git remote set-url origin [url]</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 显示远程所有仓库</span><br><span class="line"><span class="meta">$</span> git remote -v</span><br></pre></td></tr></table></figure>
-
-<h3 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 建立追踪关系，在现有分支与指定的远程分支之间</span><br><span class="line"><span class="meta">$</span> git branch --set-upstream [branch] [remote-branch]</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 合并指定分支到当前分支</span><br><span class="line"><span class="meta">$</span> git merge [branch]</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 删除分支 </span><br><span class="line"><span class="meta">$</span> git branch -d [branch name]</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 删除远程分支</span><br><span class="line"><span class="meta">$</span> git push origin --delete [branch-name]</span><br><span class="line"><span class="meta">$</span> git branch -dr [remote/branch]</span><br></pre></td></tr></table></figure>
-
-<h3 id="撤消操作"><a href="#撤消操作" class="headerlink" title="撤消操作"></a>撤消操作</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 暂时将未提交的变化移除，稍后再移入</span><br><span class="line"><span class="meta">$</span> git stash # 暂存</span><br><span class="line"><span class="meta">$</span> git stash pop   # 取出暂存</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 恢复暂存区的所有文件到工作区</span><br><span class="line"><span class="meta">$</span> git checkout [filename]</span><br></pre></td></tr></table></figure>
-
-
+<ul>
+<li><p>完全图：每个结点之间都有关系（互相联通），如a图</p>
+</li>
+<li><p>有向完全图：每个结点的每个方向之间都有关系，如b图</p>
+</li>
+<li><p>连通图：从一个结点到另一个结点之间，至少存在一条路径，则这样的图称为连通图</p>
+</li>
+<li><p>强连通图：在有向图中，所有的节点都存在一条路径连通，则为强连通图（有方向的连通）</p>
+</li>
+</ul>
+<h2 id="图的邻接矩阵存储表示（二维数据）"><a href="#图的邻接矩阵存储表示（二维数据）" class="headerlink" title="图的邻接矩阵存储表示（二维数据）"></a>图的邻接矩阵存储表示（二维数据）</h2>
     </div>
 
     
@@ -293,13 +300,17 @@
           
         
         <div class="post-tags">
-            <a href="/tags/git/" rel="tag"># git</a>
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
+          
+            <a href="/tags/图/" rel="tag"># 图</a>
+          
+            <a href="/tags/java/" rel="tag"># java</a>
           
         </div>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-              <a href="/2019/05/01/ASP-NET-Core使用JWT做接口鉴权/" rel="next" title="ASP.NET Core使用JWT做接口鉴权">
-                <i class="fa fa-chevron-left"></i> ASP.NET Core使用JWT做接口鉴权
+              <a href="/2019/09/19/二叉树/" rel="next" title="二叉树">
+                <i class="fa fa-chevron-left"></i> 二叉树
               </a>
             
           </div>
@@ -307,8 +318,8 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-              <a href="/2019/08/18/机械键盘/" rel="prev" title="机械键盘">
-                机械键盘 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/09/24/Chrome工具栏出现两个图标/" rel="prev" title="Chrome工具栏出现两个图标">
+                Chrome工具栏出现两个图标 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -470,7 +481,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化"><span class="nav-number">1.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程同步操作"><span class="nav-number">3.</span> <span class="nav-text">远程同步操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支操作"><span class="nav-number">4.</span> <span class="nav-text">分支操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#撤消操作"><span class="nav-number">5.</span> <span class="nav-text">撤消操作</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Concept"><span class="nav-number">1.</span> <span class="nav-text">Concept</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图的邻接矩阵存储表示（二维数据）"><span class="nav-number">2.</span> <span class="nav-text">图的邻接矩阵存储表示（二维数据）</span></a></li></ol></div>
             
 
           </div>
@@ -592,9 +603,9 @@
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://wukaixian.me/2019/08/08/git常用命令/";
-    this.page.identifier = "2019/08/08/git常用命令/";
-    this.page.title = 'git常用命令';};
+    this.page.url = "https://wukaixian.me/2019/09/19/graph/";
+    this.page.identifier = "2019/09/19/graph/";
+    this.page.title = 'graph';};
   function loadComments() {
     if (window.DISQUS) {
       DISQUS.reset({
