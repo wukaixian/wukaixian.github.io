@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="首先所有的密码都应该加密后存储，这是共识。重点在于如何实现加密的过程，对安全的要求不同，做法也不一样。 过去，大家普遍使用md5 hash算法来处理，或者加salt。 md5被证实为不安全之后，大家开始转向sha家族，比如sha1、sha256、sha512。 现在spring官方推荐敷衍BCrypt算法来实现密码的加密存储和验证，spring security也提供了BCrypt实现的类库。 m">
+  <meta name="description" content="首先所有的密码都应该加密后存储，这是共识。重点在于如何实现加密的过程，对安全的要求不同，做法也不一样。 过去，大家普遍使用md5 hash算法来处理，或者加salt。 md5被证实为不安全之后，大家开始转向sha家族，比如sha1、sha256、sha512。 现在spring官方推荐BCrypt算法来实现密码的加密存储和验证，spring security也提供了BCrypt实现的类库。 md5">
 <meta name="keywords" content="java,spring">
 <meta property="og:type" content="article">
 <meta property="og:title" content="密码应该怎么存储？">
 <meta property="og:url" content="https://wukaixian.me/2019/09/25/密码应该怎么存储？/index.html">
 <meta property="og:site_name" content="{ wukaixian }">
-<meta property="og:description" content="首先所有的密码都应该加密后存储，这是共识。重点在于如何实现加密的过程，对安全的要求不同，做法也不一样。 过去，大家普遍使用md5 hash算法来处理，或者加salt。 md5被证实为不安全之后，大家开始转向sha家族，比如sha1、sha256、sha512。 现在spring官方推荐敷衍BCrypt算法来实现密码的加密存储和验证，spring security也提供了BCrypt实现的类库。 m">
+<meta property="og:description" content="首先所有的密码都应该加密后存储，这是共识。重点在于如何实现加密的过程，对安全的要求不同，做法也不一样。 过去，大家普遍使用md5 hash算法来处理，或者加salt。 md5被证实为不安全之后，大家开始转向sha家族，比如sha1、sha256、sha512。 现在spring官方推荐BCrypt算法来实现密码的加密存储和验证，spring security也提供了BCrypt实现的类库。 md5">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-25T06:24:03.189Z">
+<meta property="og:updated_time" content="2019-09-25T06:25:58.832Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="密码应该怎么存储？">
-<meta name="twitter:description" content="首先所有的密码都应该加密后存储，这是共识。重点在于如何实现加密的过程，对安全的要求不同，做法也不一样。 过去，大家普遍使用md5 hash算法来处理，或者加salt。 md5被证实为不安全之后，大家开始转向sha家族，比如sha1、sha256、sha512。 现在spring官方推荐敷衍BCrypt算法来实现密码的加密存储和验证，spring security也提供了BCrypt实现的类库。 m">
+<meta name="twitter:description" content="首先所有的密码都应该加密后存储，这是共识。重点在于如何实现加密的过程，对安全的要求不同，做法也不一样。 过去，大家普遍使用md5 hash算法来处理，或者加salt。 md5被证实为不安全之后，大家开始转向sha家族，比如sha1、sha256、sha512。 现在spring官方推荐BCrypt算法来实现密码的加密存储和验证，spring security也提供了BCrypt实现的类库。 md5">
   <link rel="canonical" href="https://wukaixian.me/2019/09/25/密码应该怎么存储？/">
 
 
@@ -274,7 +274,7 @@
         <p>首先所有的密码都应该加密后存储，这是共识。重点在于如何实现加密的过程，对安全的要求不同，做法也不一样。</p>
 <p>过去，大家普遍使用md5 hash算法来处理，或者加salt。</p>
 <p>md5被证实为不安全之后，大家开始转向sha家族，比如sha1、sha256、sha512。</p>
-<p>现在spring官方推荐敷衍BCrypt算法来实现密码的加密存储和验证，spring security也提供了BCrypt实现的类库。</p>
+<p>现在spring官方推荐BCrypt算法来实现密码的加密存储和验证，spring security也提供了BCrypt实现的类库。</p>
 <h2 id="md5-salt"><a href="#md5-salt" class="headerlink" title="md5+salt"></a>md5+salt</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    String rawPassword=<span class="string">"123456"</span>;</span><br><span class="line">	String salt=<span class="string">"random string"</span>;</span><br><span class="line">    </span><br><span class="line">    String encryptedPassword=md5(rawPassword,salt);  </span><br><span class="line">    System.out.println(encryptedPassword);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">static</span> String <span class="title">md5</span><span class="params">(String rawPassword,String salt)</span></span>&#123;</span><br><span class="line">    String str=rawPassword+salt;       </span><br><span class="line">    MessageDigest md = MessageDigest.getInstance(<span class="string">"MD5"</span>);</span><br><span class="line">    <span class="keyword">byte</span>[] hashInBytes = md.digest(password.getBytes(StandardCharsets.UTF_8));</span><br><span class="line">    StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">byte</span> b : hashInBytes) &#123;</span><br><span class="line">        sb.append(String.format(<span class="string">"%02x"</span>, b));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sb.toString();	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="sha256-salt"><a href="#sha256-salt" class="headerlink" title="sha256+salt"></a>sha256+salt</h2><p>使用官方提供的MessageDigest类来实现。</p>
