@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="症状与原因在Windows 10安装了IDEA后，每次启动光是单击到出现界面都耗时超过30秒，我的电脑配置也并不低，250G SSD+i7-7700+16G内存，即使是Visual Studio这种重量级选手也是秒开的，按理说IDEA不应该这么慢。 遂google搜了一圈，发现Windows Defender是罪魁祸首。每次IDEA启动的时候，Windows Defender的实时监控程序会对ex">
+  <meta name="description" content="「could not autowire,no beans of type found」，在IDEA对组件进行单元测试的时候，经常会出现这样的提示。虽然可以正常运行，但看差变量下画差一条红色波浪线，总觉得不安，就像你问女朋友怎么了，她说没事，但脸色很难看，你不可能会真以为没事。在google搜了下，这个问题使用IDEA的人普遍都碰到，大概是因为IDEA是根据注解来查到bean，我们使用SpringB">
 <meta name="keywords" content="IDEA">
 <meta property="og:type" content="article">
-<meta property="og:title" content="提升IDEA的启动速度">
-<meta property="og:url" content="https://wukaixian.me/2019/08/30/提升IDEA的启动速度/index.html">
+<meta property="og:title" content="IDEA提示@Autowrie错误的解决方案">
+<meta property="og:url" content="https://wukaixian.me/2019/11/01/IDEA提示-Autowrie错误的解决方案/index.html">
 <meta property="og:site_name" content="{ wukaixian }">
-<meta property="og:description" content="症状与原因在Windows 10安装了IDEA后，每次启动光是单击到出现界面都耗时超过30秒，我的电脑配置也并不低，250G SSD+i7-7700+16G内存，即使是Visual Studio这种重量级选手也是秒开的，按理说IDEA不应该这么慢。 遂google搜了一圈，发现Windows Defender是罪魁祸首。每次IDEA启动的时候，Windows Defender的实时监控程序会对ex">
+<meta property="og:description" content="「could not autowire,no beans of type found」，在IDEA对组件进行单元测试的时候，经常会出现这样的提示。虽然可以正常运行，但看差变量下画差一条红色波浪线，总觉得不安，就像你问女朋友怎么了，她说没事，但脸色很难看，你不可能会真以为没事。在google搜了下，这个问题使用IDEA的人普遍都碰到，大概是因为IDEA是根据注解来查到bean，我们使用SpringB">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-30T07:03:37.735Z">
+<meta property="og:updated_time" content="2019-11-01T02:02:30.409Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="提升IDEA的启动速度">
-<meta name="twitter:description" content="症状与原因在Windows 10安装了IDEA后，每次启动光是单击到出现界面都耗时超过30秒，我的电脑配置也并不低，250G SSD+i7-7700+16G内存，即使是Visual Studio这种重量级选手也是秒开的，按理说IDEA不应该这么慢。 遂google搜了一圈，发现Windows Defender是罪魁祸首。每次IDEA启动的时候，Windows Defender的实时监控程序会对ex">
-  <link rel="canonical" href="https://wukaixian.me/2019/08/30/提升IDEA的启动速度/">
+<meta name="twitter:title" content="IDEA提示@Autowrie错误的解决方案">
+<meta name="twitter:description" content="「could not autowire,no beans of type found」，在IDEA对组件进行单元测试的时候，经常会出现这样的提示。虽然可以正常运行，但看差变量下画差一条红色波浪线，总觉得不安，就像你问女朋友怎么了，她说没事，但脸色很难看，你不可能会真以为没事。在google搜了下，这个问题使用IDEA的人普遍都碰到，大概是因为IDEA是根据注解来查到bean，我们使用SpringB">
+  <link rel="canonical" href="https://wukaixian.me/2019/11/01/IDEA提示-Autowrie错误的解决方案/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>提升IDEA的启动速度 | { wukaixian }</title>
+  <title>IDEA提示@Autowrie错误的解决方案 | { wukaixian }</title>
   
 
 
@@ -209,7 +209,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wukaixian.me/2019/08/30/提升IDEA的启动速度/">
+    <link itemprop="mainEntityOfPage" href="https://wukaixian.me/2019/11/01/IDEA提示-Autowrie错误的解决方案/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wukaixian">
@@ -223,7 +223,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">提升IDEA的启动速度
+          <h1 class="post-title" itemprop="name headline">IDEA提示@Autowrie错误的解决方案
 
             
           </h1>
@@ -240,7 +240,7 @@
                 
               
 
-              <time title="创建时间：2019-08-30 14:25:26" itemprop="dateCreated datePublished" datetime="2019-08-30T14:25:26+08:00">2019-08-30</time>
+              <time title="创建时间：2019-11-01 09:42:00" itemprop="dateCreated datePublished" datetime="2019-11-01T09:42:00+08:00">2019-11-01</time>
             </span>
           
 
@@ -254,8 +254,8 @@
     </span>
     <span class="post-meta-item-text">评论数：</span>
   
-    <a href="/2019/08/30/提升IDEA的启动速度/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/30/提升IDEA的启动速度/" itemprop="commentCount"></span>
+    <a href="/2019/11/01/IDEA提示-Autowrie错误的解决方案/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/11/01/IDEA提示-Autowrie错误的解决方案/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -271,30 +271,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="症状与原因"><a href="#症状与原因" class="headerlink" title="症状与原因"></a>症状与原因</h2><p>在Windows 10安装了IDEA后，每次启动光是单击到出现界面都耗时超过30秒，我的电脑配置也并不低，250G SSD+i7-7700+16G内存，即使是Visual Studio这种重量级选手也是秒开的，按理说IDEA不应该这么慢。</p>
-<p>遂google搜了一圈，发现<strong>Windows Defender</strong>是罪魁祸首。每次IDEA启动的时候，Windows Defender的实时监控程序会对exe进行扫描，扫描耗时很长。</p>
-<p>想象一下，当你充满激情想写两行代码时，点击IDEA图标，发现半天没动静，于是你去倒了杯水，上了个厕所回来发现还没起来，你拿出手机，刷了下微信微博，两个小时过去了，才想起来自己是要写代码来着，你怒火中烧：垃圾IDEA，毁我青春。</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>打开 设置&gt; 更新与安全&gt; Windows安全中心&gt; 病毒和威胁防护&gt; 管理设置&gt; 添加或删除排除项。把<code>idea64.exe</code>添加到<strong>进程排除项</strong>中即可。</p>
-<p>其他基于IntelliJ平台的IDEs进程名称：</p>
-<ul>
-<li>webstorm64.exe</li>
-<li>datagrip64.exe</li>
-<li>clion64.exe</li>
-<li>rider64.exe</li>
-<li>datagrip64.exe</li>
-<li>goland64.exe</li>
-<li>phpstorm64.exe</li>
-<li>pycharm64.exe</li>
-<li>rubymine64.exe</li>
-<li>webstorm64.exe</li>
-<li>studio64.exe</li>
-</ul>
-<p>常见的开发工具Windows Defender排除项参考这份脚本清单 &gt;&gt; <a href="https://gist.github.com/nerzhulart/89c6a376b521a6e7eb69a04277a9489a" target="_blank" rel="noopener">Windows Defender Exclusions</a></p>
-<h2 id="其他原因"><a href="#其他原因" class="headerlink" title="其他原因"></a>其他原因</h2><p>还有一个导致IDEA启动慢的原因是插件太多，默认的插件很多是用不上的，导致启动时加载插件慢，可以根据自己的开发需求选择禁用一些插件。</p>
-<p>解决办法：Settings&gt;Plugins&gt;Installed 界面中禁用一些自己用不上的插件，比如安卓插件、JSP插件等…</p>
-<hr>
-
-<p>参考来源：<a href="https://intellij-support.jetbrains.com/hc/en-us/articles/360005028939-Slow-startup-on-Windows-splash-screen-appears-in-more-than-20-seconds" target="_blank" rel="noopener">IDEA Slow Startup</a></p>
+        <p>「could not autowire,no beans of type found」，在IDEA对组件进行单元测试的时候，经常会出现这样的提示。<br>虽然可以正常运行，但看差变量下画差一条红色波浪线，总觉得不安，就像你问女朋友怎么了，她说没事，但脸色很难看，你不可能会真以为没事。<br>在google搜了下，这个问题使用IDEA的人普遍都碰到，大概是因为IDEA是根据注解来查到bean，我们使用SpringBoot的时候，为了不用每个组件都打一个注解，一般都使用package scan来配置，这们省点事，但IDEA不认识scan。</p>
+<p>解决方案有三种：</p>
+<h3 id="组件加上-Component或-Service、-Repository注解"><a href="#组件加上-Component或-Service、-Repository注解" class="headerlink" title="组件加上@Component或@Service、@Repository注解"></a>组件加上@Component或@Service、@Repository注解</h3><p>加个组件注解之后，IDEA就可以正常查到，缺点是每个组件都得这么干，这不是好办法。</p>
+<h3 id="修改IDEA配置，调整检查级别"><a href="#修改IDEA配置，调整检查级别" class="headerlink" title="修改IDEA配置，调整检查级别"></a>修改IDEA配置，调整检查级别</h3><p>可以把IDEA的检查级别从错误降低至提示，或警告，这个方法也不建议，调整配置会影响其他的功能检查，存在隐患。</p>
+<h3 id="忽略它"><a href="#忽略它" class="headerlink" title="忽略它"></a>忽略它</h3><p>当你知道这只是IDEA功能上一个小缺陷的时候，就不必要纠结花时间在上面，而且它仅仅是在单元测试时提示，也不影响测试的运行，所以，忘记它，干你的事。<br>就像StackOverflow上一位答主说的：</p>
+<blockquote>
+<p>Man is always greater than machine.</p>
+</blockquote>
+<p>参考：<a href="https://stackoverflow.com/questions/26889970/intellij-incorrectly-saying-no-beans-of-type-found-for-autowired-repository" target="_blank" rel="noopener">https://stackoverflow.com/questions/26889970/intellij-incorrectly-saying-no-beans-of-type-found-for-autowired-repository</a></p>
 
     </div>
 
@@ -311,8 +296,8 @@
         </div>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-              <a href="/2019/08/30/使用logback-slf4j-lombok简化日志记录/" rel="next" title="使用logback+slf4j+lombok简化日志记录">
-                <i class="fa fa-chevron-left"></i> 使用logback+slf4j+lombok简化日志记录
+              <a href="/2019/10/29/一份技术书单/" rel="next" title="一份技术书单">
+                <i class="fa fa-chevron-left"></i> 一份技术书单
               </a>
             
           </div>
@@ -320,10 +305,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-              <a href="/2019/08/30/使用SSH登录GitHub操作仓库/" rel="prev" title="使用SSH登录GitHub操作仓库">
-                使用SSH登录GitHub操作仓库 <i class="fa fa-chevron-right"></i>
-              </a>
-            
           </div>
         </div>
     </footer>
@@ -489,7 +470,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#症状与原因"><span class="nav-number">1.</span> <span class="nav-text">症状与原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">2.</span> <span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他原因"><span class="nav-number">3.</span> <span class="nav-text">其他原因</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#组件加上-Component或-Service、-Repository注解"><span class="nav-number">1.</span> <span class="nav-text">组件加上@Component或@Service、@Repository注解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改IDEA配置，调整检查级别"><span class="nav-number">2.</span> <span class="nav-text">修改IDEA配置，调整检查级别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#忽略它"><span class="nav-number">3.</span> <span class="nav-text">忽略它</span></a></li></ol></div>
             
 
           </div>
@@ -611,9 +592,9 @@
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://wukaixian.me/2019/08/30/提升IDEA的启动速度/";
-    this.page.identifier = "2019/08/30/提升IDEA的启动速度/";
-    this.page.title = '提升IDEA的启动速度';};
+    this.page.url = "https://wukaixian.me/2019/11/01/IDEA提示-Autowrie错误的解决方案/";
+    this.page.identifier = "2019/11/01/IDEA提示-Autowrie错误的解决方案/";
+    this.page.title = 'IDEA提示@Autowrie错误的解决方案';};
   function loadComments() {
     if (window.DISQUS) {
       DISQUS.reset({
