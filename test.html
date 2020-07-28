@@ -15,13 +15,12 @@
         body {
             width: 100%;
             height: 100%;
-            ;
+            position: relative;            
             font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
         }
 
         #app {
-            margin:10px;
-            width: 1024px;
+            margin: 10px 0 100px 10px;            
         }
     </style>
 </head>
@@ -29,51 +28,51 @@
 <body>
     <div id="app">
         <h3>粤警心理SOUL问卷</h2>
-            <el-form ref="form" :model="model" label-position="top">
+            <el-form ref="form" :model="model" label-position="top" v-loading="loading">
                 <el-form-item label="1、性别">
-                    <el-radio v-model="model.gender" label="1" border>男</el-radio>
-                    <el-radio v-model="model.gender" label="2" border>女</el-radio>
+                    <el-radio v-model="model.gender" label="1" border size="small">男</el-radio>
+                    <el-radio v-model="model.gender" label="2" border size="small">女</el-radio>
                 </el-form-item>
                 <el-form-item label="2、出生年月">
-                    <el-date-picker v-model="model.bird" type="month">
+                    <el-date-picker v-model="model.bird" size="small" type="month">
                     </el-date-picker>
                 </el-form-item>
                 <el-form-item label="3、喜欢的头像">
-                    <el-radio v-model="model.data3" label="1" border>自拍</el-radio>
-                    <el-radio v-model="model.data3" label="2" border>卡通</el-radio>
-                    <el-radio v-model="model.data3" label="3" border>风景</el-radio>
-                    <el-radio v-model="model.data3" label="4" border>明星</el-radio>
-                    <el-radio v-model="model.data3" label="5" border>其他</el-radio>
+                    <el-radio v-model="model.data3" label="1" border size="small">自拍</el-radio>
+                    <el-radio v-model="model.data3" label="2" border size="small">卡通</el-radio>
+                    <el-radio v-model="model.data3" label="3" border size="small">风景</el-radio>
+                    <el-radio v-model="model.data3" label="4" border size="small">明星</el-radio>
+                    <el-radio v-model="model.data3" label="5" border size="small">其他</el-radio>
                 </el-form-item>
                 <el-form-item label="4、昵称">
-                    <el-input v-model="model.name" placeholder="" style="width:200px;"></el-input>
+                    <el-input v-model="model.name" placeholder="" size="small" style="width:200px;"></el-input>
                 </el-form-item>
                 <el-form-item label="5、你更喜欢被认为是一个？">
-                    <el-radio v-model="model.data5" label="1" border>坚决的人，不轻易心软的人</el-radio>
-                    <el-radio v-model="model.data5" label="2" border>心肠软的人</el-radio>
+                    <el-radio v-model="model.data5" label="1" border size="small">坚决的人，不轻易心软的人</el-radio>
+                    <el-radio v-model="model.data5" label="2" border size="small">心肠软的人</el-radio>
                 </el-form-item>
                 <el-form-item label="6、在很熟悉的朋友眼中你是一个怎样的人？">
-                    <el-radio v-model="model.data6" label="1" border>很善于帮助他们的人了解自己的情绪</el-radio>
-                    <el-radio v-model="model.data6" label="2" border>会帮助朋友做符合逻辑的人</el-radio>
+                    <el-radio v-model="model.data6" label="1" border size="small">很善于帮助他们的人了解自己的情绪</el-radio>
+                    <el-radio v-model="model.data6" label="2" border size="small">会帮助朋友做符合逻辑的人</el-radio>
                 </el-form-item>
                 <el-form-item label="7、在说话时，你更看重？">
-                    <el-radio v-model="model.data7" label="1" border>人际感受，有时可能不愿讲真话</el-radio>
-                    <el-radio v-model="model.data7" label="2" border>达成结果，有时可能过于直接让别人不高兴</el-radio>
+                    <el-radio v-model="model.data7" label="1" border size="small">人际感受，有时可能不愿讲真话</el-radio>
+                    <el-radio v-model="model.data7" label="2" border size="small">达成结果，有时可能过于直接让别人不高兴</el-radio>
                 </el-form-item>
                 <el-form-item label="8、在工作上，你表现出来更多的是？">
-                    <el-radio v-model="model.data8" label="1" border>充满热忱，有很多想法很有灵性</el-radio>
-                    <el-radio v-model="model.data8" label="2" border>心思细腻完美精确而且为人可靠</el-radio>
+                    <el-radio v-model="model.data8" label="1" border size="small">充满热忱，有很多想法很有灵性</el-radio>
+                    <el-radio v-model="model.data8" label="2" border size="small">心思细腻完美精确而且为人可靠</el-radio>
                 </el-form-item>
                 <el-form-item label="9、在日常生活中，对一些要做的小事，你通常？">
-                    <el-radio v-model="model.data9" label="1" border>能清楚记得</el-radio>
-                    <el-radio v-model="model.data9" label="2" border>常会忘记 但是在重要的事情上从不含糊</el-radio>
+                    <el-radio v-model="model.data9" label="1" border size="small">能清楚记得</el-radio>
+                    <el-radio v-model="model.data9" label="2" border size="small">常会忘记 但是在重要的事情上从不含糊</el-radio>
                 </el-form-item>
                 <el-form-item label="10、选择你比较喜欢的？">
-                    <el-radio v-model="model.data10" label="1" border>捕捉生命中的精彩点滴</el-radio>
-                    <el-radio v-model="model.data10" label="2" border>探寻生命的意义和真谛</el-radio>
+                    <el-radio v-model="model.data10" label="1" border size="small">捕捉生命中的精彩点滴</el-radio>
+                    <el-radio v-model="model.data10" label="2" border size="small">探寻生命的意义和真谛</el-radio>
                 </el-form-item>
             </el-form>
-            <el-button type="primary" @click="submit">提&nbsp;&nbsp;&nbsp;交</el-button>
+            <el-button type="primary" @click="submit" :loading="loading">提&nbsp;&nbsp;&nbsp;交</el-button>
             <p style="font-size: 11px;color: #888;margin-top: 20px;">
                 注释：一个是大数据算法测试匹配，一个是匿名，一个是氛围与粤警心理工程对接，积极开展调查问卷，创建性格测试数据库，增大碰撞样本范围。
             </p>
@@ -81,23 +80,45 @@
     <script>
         var vm = new Vue({
             el: '#app',
-            data: {
-                model: {}
+            data: {                
+                model: {},
+                loading:false
             },
             methods: {
                 submit() {
-                    let list = ['杨娇娜', '严文彩', '戴嘉慧', '吴姗姗'];
-                    var match = '';
+                    var list = ['杨娇娜', '严文彩', '戴嘉慧', '吴姗姗'];
+                    var parents = [];  // 百分比
+                    var index = 0;
+                    while (index < 4) {
+                        var p = parseInt(Math.random() * 100);
+                        if (p < 20 || p > 80 || parents.indexOf(p) >= 0) {
+                            continue;
+                        }
+
+                        parents[index++]=p;                        
+                    }
+                    parents.sort(function(x,y){return y-x});                    
+
+                    var matchs = [];
                     if (this.model.name == "廖坤光") {
-                        match = list.toString();
+                        for (var i = 0; i < list.length; i++) {
+                            matchs.push(list[i] + parents[i]+'%');
+                        }
                     } else {
                         // 随机选两人
-                        var index = Math.floor(Math.random() * 3) + 1;
-                        match += list[index] + ',';
+                        index = Math.floor(Math.random() * 3) + 1;
+                        matchs.push(list[index] + parents[index]+'%');
                         list.splice(index, 1);
-                        match += list[Math.floor(Math.random() * 3) + 1];
+                        parents.splice(index,1);
+
+                        index = Math.floor(Math.random() * 2) + 1;
+                        matchs.push(list[index] + parents[index]+'%');
                     }
-                    this.$alert('匹配结果：' + match);
+                    this.loading=true;
+                    setTimeout(function(){
+                        vm.loading=false;
+                        vm.$alert('匹配结果：' + matchs.toString());                        
+                    },1500)                    
                 }
             }
         })
